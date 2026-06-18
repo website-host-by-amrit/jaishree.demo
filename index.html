@@ -1,845 +1,382 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>जय श्री कृष्ण — शुद्ध शाकाहारी थाली</title>
-<meta name="description" content="जय श्री कृष्ण — पारंपरिक शुद्ध शाकाहारी थाली रेस्टोरेंट">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Jai Shree Krishna Restaurant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --maroon-deep:#3A0E14;
-    --maroon-mid:#5C171E;
-    --maroon-light:#7A2229;
-    --ash:#241410;
-    --ash-light:#2F1B14;
-    --saffron:#E89B3C;
-    --saffron-light:#F4B96B;
-    --gold:#C9A227;
-    --gold-light:#E8C766;
-    --peacock:#0E4A43;
-    --peacock-light:#1B6B61;
-    --cream:#F2E8CF;
-    --cream-dim:#D8C9A3;
-    --shadow:rgba(0,0,0,.55);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-    --font-display:'Yatra One', cursive;
-    --font-elegant:'Cormorant Garamond', serif;
-    --font-body:'Mukta', sans-serif;
-  }
+body{
+background:#0d0d0d;
+color:#fff;
+overflow-x:hidden;
+}
 
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--ash);
-    color:var(--cream);
-    font-family:var(--font-body);
-    line-height:1.6;
-    overflow-x:hidden;
-  }
-  img,svg{display:block;max-width:100%;}
-  a{color:inherit;text-decoration:none;}
-  ul{list-style:none;}
-  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;}
-  :focus-visible{outline:2px solid var(--gold-light);outline-offset:3px;}
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
 
-  .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
-  .section{padding:110px 0;position:relative;}
-  .section--alt{background:linear-gradient(180deg,var(--ash) 0%,var(--ash-light) 100%);}
+.logo{
+font-size:28px;
+font-weight:700;
+color:#FFD700;
+}
 
-  .eyebrow{
-    font-family:var(--font-elegant);
-    font-style:italic;
-    font-weight:600;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    font-size:.8rem;
-    color:var(--saffron-light);
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:14px;
-  }
-  .eyebrow::before, .eyebrow::after{content:"";width:24px;height:1px;background:var(--gold);}
+nav a{
+text-decoration:none;
+color:#fff;
+margin-left:25px;
+transition:.3s;
+}
 
-  .heading-xl{
-    font-family:var(--font-display);
-    font-size:clamp(2.4rem,5vw,4.2rem);
-    line-height:1.1;
-    color:var(--cream);
-    text-shadow:0 2px 18px rgba(0,0,0,.4);
-  }
-  .heading-lg{
-    font-family:var(--font-display);
-    font-size:clamp(1.9rem,3.4vw,2.8rem);
-    color:var(--gold-light);
-    margin-bottom:18px;
-  }
-  .lede{
-    font-family:var(--font-elegant);
-    font-size:1.2rem;
-    color:var(--cream-dim);
-    font-style:italic;
-    max-width:560px;
-  }
-  .divider{
-    width:120px;height:14px;margin:22px auto;
-    background:
-      radial-gradient(circle at 10px 7px,var(--gold) 0 3px,transparent 4px),
-      radial-gradient(circle at 60px 7px,var(--gold) 0 3px,transparent 4px),
-      radial-gradient(circle at 110px 7px,var(--gold) 0 3px,transparent 4px),
-      linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold) 80%,transparent);
-    background-size:100% 1px,100% 1px,100% 1px,100% 1px;
-    background-position:center;
-    background-repeat:no-repeat;
-    opacity:.85;
-  }
+nav a:hover{
+color:#FFD700;
+}
 
-  .btn{
-    display:inline-flex;align-items:center;gap:10px;
-    padding:14px 30px;
-    border-radius:999px;
-    font-weight:600;
-    font-size:.95rem;
-    letter-spacing:.02em;
-    transition:transform .25s ease, box-shadow .25s ease;
-  }
-  .btn--gold{
-    background:linear-gradient(135deg,var(--gold-light),var(--gold));
-    color:var(--ash);
-    box-shadow:0 8px 24px rgba(201,162,39,.3);
-  }
-  .btn--ghost{
-    border:1px solid var(--gold);
-    color:var(--cream);
-  }
-  .btn:hover{transform:translateY(-3px);}
-  .btn--gold:hover{box-shadow:0 12px 30px rgba(201,162,39,.45);}
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600');
+background-size:cover;
+background-position:center;
+}
 
-  /* reveal on scroll */
-  .reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease, transform .8s ease;}
-  .reveal.in-view{opacity:1;transform:translateY(0);}
+.hero-content h1{
+font-size:75px;
+color:#FFD700;
+margin-bottom:15px;
+}
 
-  /* ============ NAVBAR ============ */
-  .navbar{
-    position:fixed;top:0;left:0;width:100%;z-index:100;
-    backdrop-filter:blur(14px);
-    background:rgba(36,20,16,.55);
-    border-bottom:1px solid rgba(201,162,39,.18);
-  }
-  .navbar .container{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;}
-  .brand{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-size:1.25rem;color:var(--gold-light);}
-  .brand-mark{
-    width:42px;height:42px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%,var(--gold-light),var(--gold) 60%,#8a6b16 100%);
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 0 0 2px rgba(232,199,102,.25), 0 6px 16px rgba(0,0,0,.4);
-    color:var(--ash);font-family:var(--font-display);font-size:1.1rem;
-  }
-  .nav-links{display:flex;gap:34px;font-size:.95rem;font-weight:500;}
-  .nav-links a{position:relative;padding:6px 0;}
-  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--saffron);transition:width .25s ease;}
-  .nav-links a:hover::after{width:100%;}
-  .nav-cta{display:none;}
-  @media (min-width:760px){.nav-cta{display:inline-flex;}}
-  .nav-toggle{display:block;font-size:1.6rem;color:var(--gold-light);}
-  @media (min-width:760px){.nav-links{display:flex;} .nav-toggle{display:none;}}
-  @media (max-width:759px){
-    .nav-links{
-      position:absolute;top:100%;left:0;right:0;
-      flex-direction:column;gap:0;
-      background:var(--ash);
-      border-bottom:1px solid rgba(201,162,39,.18);
-      max-height:0;overflow:hidden;transition:max-height .35s ease;
-    }
-    .nav-links.open{max-height:340px;}
-    .nav-links a{display:block;padding:16px 24px;border-top:1px solid rgba(255,255,255,.06);}
-  }
+.hero-content p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
 
-  /* ============ HERO ============ */
-  .hero{
-    min-height:100vh;
-    display:flex;align-items:center;justify-content:center;
-    position:relative;
-    background:radial-gradient(ellipse at 50% 0%,var(--maroon-light) 0%,var(--maroon-deep) 45%,var(--ash) 100%);
-    text-align:center;
-    padding-top:90px;
-    overflow:hidden;
-  }
-  .mandala{
-    position:absolute;top:50%;left:50%;
-    width:min(900px,140vw);height:min(900px,140vw);
-    transform:translate(-50%,-50%);
-    border-radius:50%;
-    background:
-      repeating-conic-gradient(from 0deg, rgba(201,162,39,.10) 0deg 4deg, transparent 4deg 18deg);
-    border:1px solid rgba(201,162,39,.18);
-    box-shadow:inset 0 0 0 24px rgba(201,162,39,.05), inset 0 0 0 60px rgba(201,162,39,.05);
-    animation:spinSlow 90s linear infinite;
-    pointer-events:none;
-  }
-  @keyframes spinSlow{to{transform:translate(-50%,-50%) rotate(360deg);}}
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#FFD700;
+color:#000;
+font-weight:600;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
 
-  .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;}
-  .hero-title{
-    font-family:var(--font-display);
-    font-size:clamp(3rem,9vw,6.4rem);
-    color:var(--gold-light);
-    text-shadow:0 4px 30px rgba(0,0,0,.55);
-    letter-spacing:.01em;
-  }
-  .hero-sub{
-    font-family:var(--font-elegant);
-    font-style:italic;
-    font-size:clamp(1.1rem,2vw,1.5rem);
-    color:var(--cream-dim);
-    margin:18px 0 36px;
-    max-width:560px;
-  }
-  .hero-ctas{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-bottom:60px;}
+.btn:hover{
+transform:translateY(-5px);
+}
 
-  .diya-row{display:flex;gap:18px;perspective:600px;}
-  .diya{position:relative;width:64px;height:54px;}
-  .diya:nth-child(2){width:80px;height:66px;}
-  .diya-bowl{
-    position:absolute;bottom:0;left:0;width:100%;height:60%;
-    border-radius:50%/60%;
-    background:radial-gradient(circle at 35% 25%,var(--gold-light),var(--gold) 55%,#7d5e16 100%);
-    box-shadow:0 8px 14px rgba(0,0,0,.5), inset 0 -4px 6px rgba(0,0,0,.25);
-  }
-  .diya-flame{
-    position:absolute;bottom:46%;left:50%;
-    width:13px;height:26px;
-    transform:translateX(-50%);
-    background:radial-gradient(circle at 50% 75%,#fff6cf,var(--saffron-light) 35%,#e2581c 75%,transparent 100%);
-    border-radius:50% 50% 50% 50%/65% 65% 35% 35%;
-    filter:blur(.3px);
-    box-shadow:0 0 18px 6px rgba(232,155,60,.55);
-    animation:flicker 2.2s ease-in-out infinite alternate;
-    transform-origin:bottom center;
-  }
-  .diya:nth-child(1) .diya-flame{animation-delay:.3s;}
-  .diya:nth-child(3) .diya-flame{animation-delay:.9s;}
-  @keyframes flicker{
-    0%{transform:translateX(-50%) scaleY(1) scaleX(1) rotate(0deg);opacity:1;}
-    30%{transform:translateX(-50%) scaleY(1.08) scaleX(.94) rotate(-2deg);}
-    55%{transform:translateX(-48%) scaleY(.92) scaleX(1.05) rotate(3deg);opacity:.92;}
-    80%{transform:translateX(-52%) scaleY(1.05) scaleX(.96) rotate(-1deg);}
-    100%{transform:translateX(-50%) scaleY(1) scaleX(1) rotate(0deg);opacity:1;}
-  }
-  .scroll-cue{
-    position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
-    font-family:var(--font-elegant);font-style:italic;font-size:.85rem;color:var(--cream-dim);
-    display:flex;flex-direction:column;align-items:center;gap:8px;
-  }
-  .scroll-cue span.line{width:1px;height:30px;background:linear-gradient(var(--gold),transparent);animation:dropPulse 1.8s ease-in-out infinite;}
-  @keyframes dropPulse{0%,100%{opacity:.3;}50%{opacity:1;}}
+section{
+padding:100px 8%;
+}
 
-  /* ============ STORY / PARALLAX ============ */
-  .story{position:relative;overflow:hidden;}
-  .story-layers{position:absolute;inset:0;pointer-events:none;}
-  .layer{position:absolute;}
-  .layer-arch{
-    top:-40px;left:50%;width:780px;height:780px;transform:translateX(-50%);
-    border:2px solid rgba(201,162,39,.10);border-radius:50% 50% 0 0/60% 60% 0 0;
-    opacity:.5;
-  }
-  .layer-feather{top:60px;right:6%;width:140px;height:280px;opacity:.5;}
-  .layer-petals{bottom:0;left:4%;width:120px;height:120px;opacity:.6;
-    background:radial-gradient(circle,var(--saffron) 0 8px,transparent 9px) 0 0/40px 40px;
-  }
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#FFD700;
+}
 
-  .story-grid{display:grid;grid-template-columns:1fr;gap:46px;align-items:center;position:relative;z-index:2;}
-  @media (min-width:880px){.story-grid{grid-template-columns:1.1fr .9fr;}}
-  .story-text p{color:var(--cream-dim);margin-bottom:16px;max-width:560px;}
-  .story-text p strong{color:var(--saffron-light);}
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
 
-  .story-badges{display:flex;gap:18px;margin-top:30px;flex-wrap:wrap;}
-  .badge{
-    width:108px;height:108px;border-radius:50%;
-    border:1px solid rgba(201,162,39,.4);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;font-family:var(--font-elegant);
-    background:radial-gradient(circle at 50% 30%,rgba(201,162,39,.12),transparent 70%);
-  }
-  .badge b{font-family:var(--font-display);font-size:1.5rem;color:var(--gold-light);display:block;}
-  .badge span{font-size:.72rem;color:var(--cream-dim);}
+.about img{
+width:100%;
+border-radius:20px;
+}
 
-  .story-visual{
-    position:relative;height:420px;border-radius:18px;
-    background:linear-gradient(160deg,var(--maroon-mid),var(--ash-light));
-    border:1px solid rgba(201,162,39,.25);
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 30px 60px rgba(0,0,0,.4);
-  }
-  .thali-icon-big{width:200px;height:200px;border-radius:50%;
-    background:
-      repeating-conic-gradient(var(--gold-light) 0 8deg, var(--gold) 8deg 16deg);
-    box-shadow:0 0 0 10px var(--ash-light), 0 0 0 12px rgba(201,162,39,.4), 0 20px 50px rgba(0,0,0,.5);
-    position:relative;
-  }
-  .thali-icon-big::after{
-    content:"";position:absolute;inset:30%;border-radius:50%;
-    background:radial-gradient(circle,var(--cream) 0%,var(--cream-dim) 70%,var(--gold) 100%);
-  }
+.about-text p{
+line-height:1.8;
+font-size:18px;
+}
 
-  /* ============ THALI 3D MENU ============ */
-  .thali-section{text-align:center;background:var(--maroon-deep);position:relative;}
-  .thali-stage{perspective:1500px;width:100%;max-width:640px;margin:50px auto 10px;height:480px;position:relative;}
-  .thali-tilt{
-    position:absolute;inset:0;
-    transform-style:preserve-3d;
-    transform:rotateX(56deg);
-  }
-  .thali-ring{
-    position:absolute;top:50%;left:50%;width:1px;height:1px;
-    transform-style:preserve-3d;
-    transform:translate(-50%,-50%) rotateZ(0deg);
-    cursor:grab;
-  }
-  .thali-ring.dragging{cursor:grabbing;}
-  .plate-base{
-    position:absolute;top:50%;left:50%;width:300px;height:300px;
-    transform:translate(-50%,-50%);
-    border-radius:50%;
-    background:repeating-radial-gradient(circle,var(--gold-light) 0 4px, var(--gold) 4px 8px);
-    box-shadow:0 0 0 14px var(--ash-light), 0 0 0 16px rgba(201,162,39,.45), inset 0 0 40px rgba(0,0,0,.35), 0 40px 70px rgba(0,0,0,.6);
-  }
-  .plate-base::after{
-    content:"";position:absolute;inset:24%;border-radius:50%;
-    background:radial-gradient(circle,var(--cream) 0%,var(--cream-dim) 75%,var(--gold) 100%);
-    box-shadow:inset 0 6px 18px rgba(0,0,0,.18);
-  }
-  .plate-medallion{
-    position:absolute;top:50%;left:50%;width:74px;height:74px;transform:translate(-50%,-50%);
-    border:1.5px solid var(--gold);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    color:var(--maroon-mid);
-  }
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-  .katori-wrap{position:absolute;top:50%;left:50%;width:0;height:0;}
-  .katori{
-    position:absolute;width:106px;
-    transform:translate(-50%,-228px);
-    text-align:center;
-    transition:filter .3s ease;
-  }
-  .katori-bowl{
-    width:80px;height:62px;margin:0 auto 8px;
-    border-radius:50% 50% 46% 46%/62% 62% 38% 38%;
-    border:2px solid rgba(232,199,102,.7);
-    box-shadow:0 10px 22px rgba(0,0,0,.5), inset 0 -6px 10px rgba(0,0,0,.25);
-    position:relative;
-  }
-  .katori-bowl::before, .katori-bowl::after{
-    content:"";position:absolute;left:50%;top:-10px;width:2px;height:14px;
-    background:rgba(255,255,255,.35);border-radius:2px;
-    animation:steam 2.6s ease-in-out infinite;
-    transform-origin:bottom center;
-  }
-  .katori-bowl::after{left:62%;animation-delay:.9s;}
-  @keyframes steam{0%{opacity:0;transform:translateY(0) scaleY(.6);}40%{opacity:.6;}100%{opacity:0;transform:translateY(-14px) scaleY(1.3);}}
-  .katori-name{font-size:.78rem;font-weight:600;color:var(--cream);}
-  .katori-price{font-family:var(--font-elegant);font-style:italic;font-size:.74rem;color:var(--saffron-light);}
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.1);
+padding:25px;
+border-radius:20px;
+transition:.4s;
+}
 
-  .d0 .katori-bowl{background:radial-gradient(circle at 35% 25%,#e9c98a,#b9852f 70%);}
-  .d1 .katori-bowl{background:radial-gradient(circle at 35% 25%,#f3d9c4,#d2693a 75%);}
-  .d2 .katori-bowl{background:radial-gradient(circle at 35% 25%,#f0e3a8,#c8a83a 75%);}
-  .d3 .katori-bowl{background:radial-gradient(circle at 35% 25%,#e7d6c9,#8a5a3a 75%);}
-  .d4 .katori-bowl{background:radial-gradient(circle at 35% 25%,#f4eccb,#caa23f 75%);}
-  .d5 .katori-bowl{background:radial-gradient(circle at 35% 25%,#e8c178,#a9651f 75%);}
-  .d6 .katori-bowl{background:radial-gradient(circle at 35% 25%,#f0b27a,#9c4a1a 75%);}
-  .d7 .katori-bowl{background:radial-gradient(circle at 35% 25%,#fdfaf0,#cfc4a3 75%);}
+.card:hover{
+transform:translateY(-10px);
+border-color:#FFD700;
+}
 
-  .thali-hint{font-family:var(--font-elegant);font-style:italic;color:var(--cream-dim);font-size:.95rem;margin-top:6px;}
+.card h3{
+color:#FFD700;
+margin-bottom:10px;
+}
 
-  .dish-panel{
-    max-width:480px;margin:34px auto 0;
-    padding:24px 30px;border:1px solid rgba(201,162,39,.3);border-radius:14px;
-    background:rgba(0,0,0,.2);
-  }
-  .dish-panel h4{font-family:var(--font-display);font-size:1.5rem;color:var(--gold-light);margin-bottom:6px;}
-  .dish-panel p{color:var(--cream-dim);font-size:.95rem;margin-bottom:10px;}
-  .dish-panel .price-tag{font-family:var(--font-elegant);font-style:italic;color:var(--saffron-light);font-size:1.1rem;}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
 
-  /* ============ GALLERY ============ */
-  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
-  @media (min-width:680px){.gallery-grid{grid-template-columns:repeat(3,1fr);}}
-  .tilt-card{
-    position:relative;perspective:800px;
-    border-radius:16px;overflow:hidden;
-    height:230px;
-    background:linear-gradient(160deg,var(--maroon-mid),var(--ash-light));
-    border:1px solid rgba(201,162,39,.22);
-    display:flex;align-items:center;justify-content:center;
-    transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
-    transition:transform .15s ease-out;
-  }
-  .tilt-card::after{
-    content:"";position:absolute;inset:0;
-    background:radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.18), transparent 60%);
-    opacity:0;transition:opacity .25s ease;
-  }
-  .tilt-card:hover::after{opacity:1;}
-  .tilt-inner{position:relative;z-index:1;text-align:center;padding:18px;}
-  .tilt-icon{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%,var(--gold-light),var(--gold) 70%);
-    box-shadow:0 10px 22px rgba(0,0,0,.4);
-  }
-  .tilt-card h5{font-family:var(--font-elegant);font-style:italic;font-weight:600;color:var(--cream);font-size:1.05rem;}
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+}
 
-  /* ============ REVIEWS ============ */
-  .review-grid{display:grid;grid-template-columns:1fr;gap:26px;}
-  @media (min-width:780px){.review-grid{grid-template-columns:repeat(3,1fr);}}
-  .review-card{
-    border:1px solid rgba(201,162,39,.22);border-radius:14px;padding:30px 26px;
-    background:rgba(0,0,0,.15);
-  }
-  .review-stars{color:var(--gold-light);margin-bottom:14px;letter-spacing:3px;}
-  .review-card p{color:var(--cream-dim);font-style:italic;font-family:var(--font-elegant);font-size:1.05rem;margin-bottom:16px;}
-  .review-author{font-weight:600;color:var(--saffron-light);font-size:.9rem;}
-  .review-loc{color:var(--cream-dim);font-size:.8rem;}
+.gallery img:hover{
+transform:scale(1.05);
+}
 
-  /* ============ CONTACT ============ */
-  .contact-grid{display:grid;grid-template-columns:1fr;gap:50px;}
-  @media (min-width:880px){.contact-grid{grid-template-columns:1fr 1fr;}}
-  .form-row{margin-bottom:18px;}
-  .form-row label{display:block;font-size:.82rem;color:var(--cream-dim);margin-bottom:6px;letter-spacing:.03em;}
-  .form-row input, .form-row textarea{
-    width:100%;padding:13px 16px;border-radius:8px;
-    background:rgba(255,255,255,.06);border:1px solid rgba(201,162,39,.3);
-    color:var(--cream);font-family:var(--font-body);font-size:.95rem;
-  }
-  .form-row input:focus, .form-row textarea:focus{border-color:var(--gold-light);}
-  .form-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .success-msg{
-    display:none;padding:22px;border:1px solid var(--gold);border-radius:10px;
-    background:rgba(201,162,39,.08);color:var(--cream);font-family:var(--font-elegant);font-style:italic;
-  }
-  .success-msg.show{display:block;}
-  .info-block{margin-bottom:28px;}
-  .info-block h6{font-family:var(--font-elegant);font-style:italic;color:var(--saffron-light);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;}
-  .info-block p{color:var(--cream-dim);}
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
 
-  /* ============ FOOTER ============ */
-  footer{background:var(--maroon-deep);padding:60px 0 28px;border-top:1px solid rgba(201,162,39,.2);}
-  .footer-grid{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;margin-bottom:34px;}
-  .footer-col h6{font-family:var(--font-display);color:var(--gold-light);font-size:1.1rem;margin-bottom:14px;}
-  .footer-col li{margin-bottom:8px;color:var(--cream-dim);font-size:.9rem;}
-  .social-row{display:flex;gap:14px;margin-top:8px;}
-  .social-dot{width:38px;height:38px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:.85rem;}
-  .footer-bottom{text-align:center;color:var(--cream-dim);font-size:.8rem;border-top:1px solid rgba(255,255,255,.08);padding-top:24px;}
+.review{
+background:#181818;
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+}
 
-  /* ============ FLOATING CALL BUTTON ============ */
-  .float-call{
-    position:fixed;bottom:26px;right:26px;z-index:90;
-    width:58px;height:58px;border-radius:50%;
-    background:linear-gradient(135deg,var(--gold-light),var(--gold));
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 10px 26px rgba(0,0,0,.5);
-    animation:pulseGlow 2.6s ease-in-out infinite;
-  }
-  @keyframes pulseGlow{0%,100%{box-shadow:0 10px 26px rgba(0,0,0,.5),0 0 0 0 rgba(201,162,39,.45);}50%{box-shadow:0 10px 26px rgba(0,0,0,.5),0 0 0 12px rgba(201,162,39,0);}}
+.review h4{
+color:#FFD700;
+margin-bottom:10px;
+}
 
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;}
-    html{scroll-behavior:auto;}
-  }
+.contact{
+text-align:center;
+}
 
-  @media (max-width:700px){
-    .section{padding:80px 0;}
-    .thali-stage{height:380px;}
-    .katori{transform:translate(-50%,-168px);width:84px;}
-    .katori-bowl{width:60px;height:46px;}
-    .plate-base{width:220px;height:220px;}
-  }
+.contact p{
+margin:15px 0;
+font-size:18px;
+}
+
+footer{
+background:#050505;
+padding:25px;
+text-align:center;
+}
+
+.fade{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:45px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+}
 </style>
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="container">
-    <a href="#home" class="brand"><span class="brand-mark">श्री</span> जय श्री कृष्ण</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">होम</a></li>
-      <li><a href="#story">हमारी कहानी</a></li>
-      <li><a href="#thali">थाली मेन्यू</a></li>
-      <li><a href="#gallery">गैलरी</a></li>
-      <li><a href="#reviews">समीक्षा</a></li>
-      <li><a href="#contact">संपर्क</a></li>
-    </ul>
-    <a href="#contact" class="btn btn--gold nav-cta">टेबल बुक करें</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu खोलें" aria-expanded="false">☰</button>
-  </div>
-</nav>
+<header>
+<div class="logo">Jai Shree Krishna</div>
 
-<!-- ============ HERO ============ -->
-<header class="hero" id="home">
-  <div class="mandala" id="mandala"></div>
-  <div class="hero-inner">
-    <p class="eyebrow">बरसों पुरानी रसोई की खुशबू</p>
-    <h1 class="hero-title">जय श्री कृष्ण</h1>
-    <p class="hero-sub">हर थाली में भगवान का प्रसाद, हर निवाले में माँ के हाथ का स्वाद — शुद्ध शाकाहारी भोजन, १९८९ से</p>
-    <div class="hero-ctas">
-      <a href="#thali" class="btn btn--gold">थाली देखें</a>
-      <a href="#contact" class="btn btn--ghost">टेबल बुक करें</a>
-    </div>
-    <div class="diya-row" id="diyaRow">
-      <div class="diya"><div class="diya-bowl"></div><div class="diya-flame"></div></div>
-      <div class="diya"><div class="diya-bowl"></div><div class="diya-flame"></div></div>
-      <div class="diya"><div class="diya-bowl"></div><div class="diya-flame"></div></div>
-    </div>
-  </div>
-  <div class="scroll-cue"><span>नीचे स्क्रॉल करें</span><span class="line"></span></div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<!-- ============ STORY ============ -->
-<section class="section story" id="story">
-  <div class="story-layers">
-    <div class="layer layer-arch" data-speed="0.08"></div>
-    <div class="layer layer-petals" data-speed="0.18"></div>
-  </div>
-  <div class="container">
-    <div class="story-grid reveal">
-      <div class="story-text">
-        <p class="eyebrow">हमारी कहानी</p>
-        <h2 class="heading-lg">परंपरा जो पीढ़ियों से चली आ रही है</h2>
-        <p>१९८९ में एक छोटे मंदिर वाले शहर की गली से शुरू हुआ यह सफर आज एक भरोसेमंद नाम बन गया है। हमारी रसोई में आज भी <strong>देसी घी</strong>, <strong>पीतल और मिट्टी के बर्तन</strong> और दादी-नानी के नुस्खों का इस्तेमाल होता है।</p>
-        <p>हर थाली भगवान कृष्ण को भोग लगाने के बाद ही परोसी जाती है — इसलिए यहाँ खाना सिर्फ भोजन नहीं, एक प्रसाद है। प्याज़-लहसुन रहित <em>सात्विक थाली</em> भी उपलब्ध है।</p>
-        <div class="story-badges">
-          <div class="badge"><b>35+</b><span>साल पुराना</span></div>
-          <div class="badge"><b>100%</b><span>शुद्ध शाकाहारी</span></div>
-          <div class="badge"><b>5000+</b><span>खुश परिवार</span></div>
-        </div>
-      </div>
-      <div class="story-visual">
-        <div class="thali-icon-big"></div>
-      </div>
-    </div>
-  </div>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Jai Shree Krishna</h1>
+<p>
+Traditional Indian Taste • Royal Ambience • Pure Vegetarian Food
+</p>
+<a href="#menu" class="btn">Explore Menu</a>
+</div>
 </section>
 
-<!-- ============ THALI 3D MENU ============ -->
-<section class="section thali-section" id="thali">
-  <div class="container reveal">
-    <p class="eyebrow">हमारी थाली, हमारा गौरव</p>
-    <h2 class="heading-lg">थाली घुमाएं, स्वाद चुनें</h2>
-    <p class="lede" style="margin:0 auto;">पीतल की थाली को माउस या उंगली से घुमाएं और हर कटोरी का स्वाद जानें</p>
+<section id="about">
+<h2 class="section-title fade">About Us</h2>
 
-    <div class="thali-stage" id="thaliStage">
-      <div class="thali-tilt">
-        <div class="thali-ring" id="thaliRing">
-          <div class="plate-base"></div>
-          <div class="plate-medallion">🪈</div>
-          <!-- dishes injected by JS -->
-        </div>
-      </div>
-    </div>
-    <p class="thali-hint">👉 थाली को खींचें या किसी कटोरी पर क्लिक करें</p>
+<div class="about">
+<img class="fade"
+src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1000">
 
-    <div class="dish-panel" id="dishPanel">
-      <h4 id="dishName">दाल बाटी चूरमा</h4>
-      <p id="dishDesc">घी में डूबी गरमा-गरम बाटी, अरहर की दाल और मीठे चूरमे की पारंपरिक थाली।</p>
-      <span class="price-tag" id="dishPrice">₹220</span>
-    </div>
-  </div>
+<div class="about-text fade">
+<p>
+Welcome to Jai Shree Krishna Restaurant.
+We bring authentic Indian flavors, fresh ingredients,
+and unforgettable dining experiences.
+Our chefs prepare every dish with love and tradition.
+</p>
+</div>
+</div>
 </section>
 
-<!-- ============ GALLERY ============ -->
-<section class="section section--alt" id="gallery">
-  <div class="container">
-    <div class="reveal" style="text-align:center;margin-bottom:50px;">
-      <p class="eyebrow">रसोई की झलकियाँ</p>
-      <h2 class="heading-lg">हर कोने में परंपरा की महक</h2>
-    </div>
-    <div class="gallery-grid reveal">
-      <div class="tilt-card" data-tilt><div class="tilt-inner"><div class="tilt-icon"></div><h5>रसोई की खुशबू</h5></div></div>
-      <div class="tilt-card" data-tilt><div class="tilt-inner"><div class="tilt-icon"></div><h5>ताज़ी थाली</h5></div></div>
-      <div class="tilt-card" data-tilt><div class="tilt-inner"><div class="tilt-icon"></div><h5>मिट्टी के बर्तन</h5></div></div>
-      <div class="tilt-card" data-tilt><div class="tilt-inner"><div class="tilt-icon"></div><h5>भक्ति भोज</h5></div></div>
-      <div class="tilt-card" data-tilt><div class="tilt-inner"><div class="tilt-icon"></div><h5>मीठे का मज़ा</h5></div></div>
-      <div class="tilt-card" data-tilt><div class="tilt-inner"><div class="tilt-icon"></div><h5>त्योहारों की रौनक</h5></div></div>
-    </div>
-  </div>
+<section id="menu">
+<h2 class="section-title fade">Special Menu</h2>
+
+<div class="menu-grid">
+
+<div class="card fade">
+<h3>Royal Thali</h3>
+<p>Traditional Indian Grand Thali Experience.</p>
+</div>
+
+<div class="card fade">
+<h3>Paneer Butter Masala</h3>
+<p>Rich creamy curry with fresh paneer.</p>
+</div>
+
+<div class="card fade">
+<h3>Veg Biryani</h3>
+<p>Fragrant rice cooked with Indian spices.</p>
+</div>
+
+<div class="card fade">
+<h3>Special Lassi</h3>
+<p>Refreshing sweet yogurt drink.</p>
+</div>
+
+<div class="card fade">
+<h3>Dal Makhani</h3>
+<p>Slow cooked creamy black lentils.</p>
+</div>
+
+<div class="card fade">
+<h3>Gulab Jamun</h3>
+<p>Soft sweet dessert served warm.</p>
+</div>
+
+</div>
 </section>
 
-<!-- ============ REVIEWS ============ -->
-<section class="section" id="reviews">
-  <div class="container">
-    <div class="reveal" style="text-align:center;margin-bottom:50px;">
-      <p class="eyebrow">अपनों की बातें</p>
-      <h2 class="heading-lg">हमारे मेहमान क्या कहते हैं</h2>
-    </div>
-    <div class="review-grid reveal">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>यहाँ की दाल-बाटी खाकर बचपन की याद आ गई। बिल्कुल घर जैसा स्वाद।</p>
-        <div class="review-author">रीना शर्मा</div>
-        <div class="review-loc">जयपुर</div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>थाली में हर कटोरी ताज़ी और प्यार से बनी लगती है। फैमिली के साथ हर इतवार यहीं आते हैं।</p>
-        <div class="review-author">विकास अग्रवाल</div>
-        <div class="review-loc">इंदौर</div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>शुद्ध शाकाहारी खाने के लिए शहर की सबसे भरोसेमंद जगह। मटका लस्सी तो लाजवाब है!</p>
-        <div class="review-author">पूजा वर्मा</div>
-        <div class="review-loc">उदयपुर</div>
-      </div>
-    </div>
-  </div>
+<section id="gallery">
+<h2 class="section-title fade">Gallery</h2>
+
+<div class="gallery">
+
+<img class="fade" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1000">
+
+<img class="fade" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1000">
+
+<img class="fade" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1000">
+
+</div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="section section--alt" id="contact">
-  <div class="container">
-    <div class="contact-grid reveal">
-      <div>
-        <p class="eyebrow">मिलते हैं थाली पर</p>
-        <h2 class="heading-lg">टेबल बुक करें</h2>
-        <div class="info-block">
-          <h6>पता</h6>
-          <p>मंदिर मार्ग, चौक बाज़ार, जयपुर, राजस्थान</p>
-        </div>
-        <div class="info-block">
-          <h6>समय</h6>
-          <p>सुबह ११:०० — रात ११:०० (सातों दिन खुला)</p>
-        </div>
-        <div class="info-block">
-          <h6>फ़ोन</h6>
-          <p>+91 98765 43210</p>
-        </div>
-      </div>
-      <div>
-        <form id="bookingForm">
-          <div class="form-row"><label for="fname">नाम</label><input id="fname" type="text" required placeholder="आपका नाम"></div>
-          <div class="form-grid2">
-            <div class="form-row"><label for="fphone">फ़ोन नंबर</label><input id="fphone" type="tel" required placeholder="9876543210"></div>
-            <div class="form-row"><label for="fguests">मेहमान</label><input id="fguests" type="number" min="1" required placeholder="2"></div>
-          </div>
-          <div class="form-row"><label for="fdate">तारीख़</label><input id="fdate" type="date" required></div>
-          <div class="form-row"><label for="fnote">विशेष अनुरोध</label><textarea id="fnote" rows="3" placeholder="जैसे: सात्विक थाली, जन्मदिन सजावट..."></textarea></div>
-          <button type="submit" class="btn btn--gold" style="width:100%;justify-content:center;">बुकिंग भेजें</button>
-        </form>
-        <div class="success-msg" id="successMsg">धन्यवाद 🙏 आपकी बुकिंग दर्ज हो गई है। हम शीघ्र आपसे संपर्क करेंगे।</div>
-      </div>
-    </div>
-  </div>
+<section id="reviews">
+<h2 class="section-title fade">Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review fade">
+<h4>★★★★★</h4>
+<p>Best vegetarian restaurant in town.</p>
+</div>
+
+<div class="review fade">
+<h4>★★★★★</h4>
+<p>Amazing food and beautiful ambience.</p>
+</div>
+
+<div class="review fade">
+<h4>★★★★★</h4>
+<p>The Royal Thali was absolutely fantastic.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title fade">Contact Us</h2>
+
+<div class="contact fade">
+<p>📍 Bhagalpur, Bihar</p>
+<p>📞 +91 9876543210</p>
+<p>📧 jaishreekrishna@gmail.com</p>
+
+<a href="#" class="btn">
+Book Table
+</a>
+</div>
 </section>
 
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col" style="max-width:280px;">
-        <h6>जय श्री कृष्ण</h6>
-        <p style="color:var(--cream-dim);font-size:.9rem;">परंपरा, भक्ति और शुद्ध शाकाहारी स्वाद का संगम — १९८९ से आपकी सेवा में।</p>
-        <div class="social-row">
-          <span class="social-dot">IG</span>
-          <span class="social-dot">FB</span>
-          <span class="social-dot">WA</span>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h6>लिंक्स</h6>
-        <ul>
-          <li><a href="#story">हमारी कहानी</a></li>
-          <li><a href="#thali">थाली मेन्यू</a></li>
-          <li><a href="#gallery">गैलरी</a></li>
-          <li><a href="#reviews">समीक्षा</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h6>संपर्क</h6>
-        <ul>
-          <li>मंदिर मार्ग, जयपुर</li>
-          <li>+91 98765 43210</li>
-          <li>सुबह ११ — रात ११</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">© <span id="year"></span> जय श्री कृष्ण — भक्ति और स्वाद से बनाया गया 🙏</div>
-  </div>
+© 2026 Jai Shree Krishna Restaurant | All Rights Reserved
 </footer>
 
-<a href="tel:+919876543210" class="float-call" aria-label="कॉल करें">📞</a>
-
 <script>
-  // year
-  document.getElementById('year').textContent = new Date().getFullYear();
 
-  // mobile nav
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
 
-  // scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
-  }, { threshold: 0.18 });
-  revealEls.forEach(el => io.observe(el));
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
 
-  // hero mandala + diya subtle mouse parallax
-  const hero = document.querySelector('.hero');
-  const mandala = document.getElementById('mandala');
-  const diyaRow = document.getElementById('diyaRow');
-  hero.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth - 0.5);
-    const y = (e.clientY / window.innerHeight - 0.5);
-    mandala.style.transform = `translate(-50%,-50%) rotate(${x*6}deg)`;
-    diyaRow.style.transform = `perspective(600px) rotateY(${x*10}deg) rotateX(${-y*6}deg)`;
-  });
-
-  // story parallax layers
-  const layers = document.querySelectorAll('.layer');
-  window.addEventListener('scroll', () => {
-    const storySection = document.getElementById('story');
-    const rect = storySection.getBoundingClientRect();
-    const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-    layers.forEach(l => {
-      const speed = parseFloat(l.dataset.speed) || 0.1;
-      l.style.transform = `translateY(${(progress - 0.5) * 200 * speed}px)`;
-    });
-  }, { passive: true });
-
-  // ===== 3D THALI CAROUSEL =====
-  const dishes = [
-    { cls:'d0', name:'दाल बाटी चूरमा', price:'₹220', desc:'घी में डूबी गरमा-गरम बाटी, अरहर की दाल और मीठे चूरमे की पारंपरिक थाली।' },
-    { cls:'d1', name:'पनीर लबाबदार', price:'₹260', desc:'मलाईदार टोमाटो ग्रेवी में डूबा हुआ ताज़ा घर का बना पनीर।' },
-    { cls:'d2', name:'गुजराती कढ़ी', price:'₹180', desc:'मीठी-तीखी छाछ की कढ़ी, बेसन के मुलायम पकौड़ों के साथ।' },
-    { cls:'d3', name:'मलाई कोफ्ता', price:'₹240', desc:'मेवों से भरे मुलायम कोफ्ते, मलाईदार ग्रेवी में डूबे हुए।' },
-    { cls:'d4', name:'जीरा राइस व तड़का दाल', price:'₹160', desc:'देसी घी के जीरे का तड़का, अरहर दाल और सुगंधित चावल के साथ।' },
-    { cls:'d5', name:'मूंग दाल कचौरी', price:'₹140', desc:'करारी कचौरी, चटपटी आलू की सब्ज़ी और मीठी चटनी के साथ।' },
-    { cls:'d6', name:'गाजर का हलवा', price:'₹120', desc:'देसी घी और मेवों से सजा गरमा-गरम पारंपरिक हलवा।' },
-    { cls:'d7', name:'मटका लस्सी', price:'₹90', desc:'मिट्टी के मटके में परोसी गई ठंडी, मलाईदार मीठी लस्सी।' },
-  ];
-
-  const ring = document.getElementById('thaliRing');
-  const stage = document.getElementById('thaliStage');
-  const step = 360 / dishes.length;
-
-  dishes.forEach((d, i) => {
-    const wrap = document.createElement('div');
-    wrap.className = 'katori-wrap';
-    wrap.style.transform = `rotate(${i * step}deg)`;
-    wrap.innerHTML = `
-      <div class="katori ${d.cls}" data-index="${i}" style="transform:translate(-50%,-228px) rotate(${-i*step}deg)">
-        <div class="katori-bowl"></div>
-        <div class="katori-name">${d.name}</div>
-        <div class="katori-price">${d.price}</div>
-      </div>`;
-    ring.appendChild(wrap);
-  });
-
-  let angle = 0;
-  let isDragging = false;
-  let startX = 0;
-  let startAngle = 0;
-  let autoRotate = true;
-  let lastActiveIndex = 0;
-
-  const dishNameEl = document.getElementById('dishName');
-  const dishDescEl = document.getElementById('dishDesc');
-  const dishPriceEl = document.getElementById('dishPrice');
-
-  function applyRing() {
-    ring.style.transform = `translate(-50%,-50%) rotateZ(${angle}deg)`;
-  }
-
-  function updateActiveDish() {
-    let norm = ((-angle % 360) + 360) % 360;
-    let idx = Math.round(norm / step) % dishes.length;
-    if (idx !== lastActiveIndex) {
-      lastActiveIndex = idx;
-      const d = dishes[idx];
-      dishNameEl.textContent = d.name;
-      dishDescEl.textContent = d.desc;
-      dishPriceEl.textContent = d.price;
-    }
-  }
-
-  stage.addEventListener('pointerdown', (e) => {
-    isDragging = true;
-    autoRotate = false;
-    ring.classList.add('dragging');
-    startX = e.clientX;
-    startAngle = angle;
-  });
-  window.addEventListener('pointermove', (e) => {
-    if (!isDragging) return;
-    const delta = (e.clientX - startX) * 0.6;
-    angle = startAngle + delta;
-    applyRing();
-    updateActiveDish();
-  });
-  window.addEventListener('pointerup', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    ring.classList.remove('dragging');
-    setTimeout(() => { autoRotate = true; }, 2200);
-  });
-
-  ring.addEventListener('click', (e) => {
-    const katori = e.target.closest('.katori');
-    if (!katori) return;
-    const idx = parseInt(katori.dataset.index, 10);
-    autoRotate = false;
-    const target = -idx * step;
-    let diff = target - (angle % 360);
-    while (diff > 180) diff -= 360;
-    while (diff < -180) diff += 360;
-    angle += diff;
-    applyRing();
-    updateActiveDish();
-    setTimeout(() => { autoRotate = true; }, 3000);
-  });
-
-  function loop() {
-    if (autoRotate && !isDragging) {
-      angle += 0.06;
-      applyRing();
-      updateActiveDish();
-    }
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
-
-  // ===== TILT GALLERY CARDS =====
-  document.querySelectorAll('[data-tilt]').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const px = (e.clientX - rect.left) / rect.width;
-      const py = (e.clientY - rect.top) / rect.height;
-      const rx = (0.5 - py) * 16;
-      const ry = (px - 0.5) * 16;
-      card.style.setProperty('--rx', rx + 'deg');
-      card.style.setProperty('--ry', ry + 'deg');
-      card.style.setProperty('--mx', (px * 100) + '%');
-      card.style.setProperty('--my', (py * 100) + '%');
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.setProperty('--rx', '0deg');
-      card.style.setProperty('--ry', '0deg');
-    });
-  });
-
-  // ===== BOOKING FORM =====
-  const bookingForm = document.getElementById('bookingForm');
-  const successMsg = document.getElementById('successMsg');
-  bookingForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    bookingForm.style.display = 'none';
-    successMsg.classList.add('show');
-  });
 </script>
+
 </body>
 </html>
